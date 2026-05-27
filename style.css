@@ -1,5 +1,5 @@
 html{
-    font-size: 50%;
+    font-size: 85%;
 }
 *{
     margin:0;
@@ -1014,6 +1014,130 @@ nav a:hover::after{
 
     pointer-events:none;
 }
+/* =========================================
+   PRINTER EFFECT
+========================================= */
+
+.invoice-paper{
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+/* PAPER MASK */
+
+.invoice-paper::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:100%;
+
+    background:#d9ccb5;
+
+    z-index:999;
+
+    transform-origin:top;
+
+}
+
+/* PRINTING */
+
+.invoice-paper.printing::after{
+
+    animation:paperReveal 2.5s ease forwards;
+
+}
+
+/* PAPER COMING OUT */
+
+@keyframes paperReveal{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    100%{
+
+        transform:translateY(100%);
+
+    }
+
+}
+
+/* STAMP */
+
+.invoice-stamp{
+
+    opacity:0;
+
+    transform:
+    translate(-50%,-50%)
+    rotate(-14deg)
+    scale(2.2);
+
+    filter:blur(10px);
+
+}
+
+/* STAMP HIT */
+
+.invoice-paper.stamped .invoice-stamp{
+
+    animation:
+    stampHit .55s
+    cubic-bezier(.17,.89,.32,1.4)
+    forwards;
+
+}
+
+@keyframes stampHit{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+        translate(-50%,-50%)
+        rotate(-14deg)
+        scale(2);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:
+        translate(-50%,-50%)
+        rotate(-14deg)
+        scale(.75);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:
+        translate(-50%,-50%)
+        rotate(-14deg)
+        scale(1);
+
+        filter:blur(0);
+
+    }
+
+}
+
 
 /* HISTORY SECTION */
 
@@ -1242,6 +1366,63 @@ nav a:hover::after{
         transparent 170px
     );
 }
+/* =========================================
+   HISTORY DROP EFFECT
+========================================= */
+
+.history-box{
+
+    opacity:0;
+
+    transform:
+    translateY(-300px)
+    rotate(-6deg);
+
+    transition:
+    1s cubic-bezier(.18,.89,.32,1.28);
+
+}
+
+/* ACTIVE */
+
+.history-box.drop-in{
+
+    opacity:1;
+
+    transform:
+    translateY(0)
+    rotate(0deg);
+
+}
+
+/* IMPACT SHAKE */
+
+.history-box::after{
+
+    transition:.3s ease;
+}
+
+.history-box.drop-in::after{
+
+    animation:boxImpact .35s ease;
+
+}
+
+@keyframes boxImpact{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    25%{
+        transform:translateY(-6px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
 
 /* MOBILE */
 
@@ -1273,7 +1454,6 @@ nav a:hover::after{
 
 .field-sky{
     text-align:center;
-
     padding:
     190px
     8%
@@ -1559,37 +1739,92 @@ nav a:hover::after{
 }
 /* DIRT TOP */
 
-.soil-top{
-    position:absolute;
-    z-index:10;
+/* =========================================
+   FARM ROW HORIZON
+========================================= */
 
-    top:-40px;
+.soil-top{
+
+    position:absolute;
+
+    top:-80px;
+
     left:0;
 
     width:100%;
-    height:80px;
+
+    height:160px;
+
+    z-index:15;
+
+    overflow:hidden;
 
     background:
-    radial-gradient(
-        circle at 20% 50%,
-        #5c381b 12px,
-        transparent 13px
-    ),
-    radial-gradient(
-        circle at 70% 30%,
-        #4d2d15 14px,
-        transparent 15px
-    ),
     linear-gradient(
         to bottom,
-        #6d441f,
-        #5b371d
+        #a77449 0%,
+        #84512d 45%,
+        #5b371d 100%
     );
 
-    background-size:
-    120px 80px,
-    140px 90px,
-    100% 100%;
+}
+
+/* FARM ROWS */
+
+.soil-top::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    repeating-linear-gradient(
+
+        100deg,
+
+        transparent 0px,
+        transparent 28px,
+
+        rgba(72,42,20,.75) 28px,
+        rgba(72,42,20,.75) 36px,
+
+        transparent 36px,
+        transparent 62px
+
+    );
+
+    transform:
+    perspective(900px)
+    rotateX(72deg)
+    scale(2.4);
+
+    transform-origin:top;
+
+    opacity:.9;
+
+}
+
+/* SOFT HIGHLIGHT */
+
+.soil-top::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        to bottom,
+        rgba(255,255,255,.12),
+        transparent 55%
+    );
+
+    opacity:.45;
+
 }
 
 /* GRID */
@@ -1701,48 +1936,29 @@ nav a:hover::after{
 /* EMOJI SPROUT */
 
 .emoji-sprout{
+
     position:absolute;
 
-    top:-320px;
+    bottom:-220px;
 
     left:50%;
 
-    transform:translateX(-30%);
+    font-size:8rem;
 
-    font-size:5rem;
+    z-index:100;
 
-    z-index:2;
+    opacity:0;
+
+    transform:
+    translateX(-50%)
+    translateY(60px)
+    scale(.4);
+
+    transition:
+    1s cubic-bezier(.18,.89,.32,1.2);
 
     pointer-events:none;
 
-    filter:
-    drop-shadow(0 6px 8px rgba(0,0,0,.12));
-
-    animation:sproutBounce 3s ease-in-out infinite;
-}
-
-/* FLOATING MOTION */
-
-@keyframes sproutBounce{
-
-    0%{
-        transform:
-        translateX(-50%)
-        rotate(-3deg);
-    }
-
-    50%{
-        transform:
-        translateX(-50%)
-        rotate(3deg)
-        translateY(-4px);
-    }
-
-    100%{
-        transform:
-        translateX(-50%)
-        rotate(-3deg);
-    }
 }
 
 /* CROP IMAGE */
@@ -1803,6 +2019,154 @@ drop-shadow(0 35px 18px rgba(0,0,0,.35));
     max-width:240px;
 
     margin-inline:auto;
+}
+/* =========================================
+   DIRT COVER
+========================================= */
+
+.crop-card{
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+/* DIRT */
+
+.crop-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:40;
+
+    background:
+
+    radial-gradient(circle at 20% 20%, #6a4020 8px, transparent 9px),
+    radial-gradient(circle at 70% 40%, #4b2c14 10px, transparent 11px),
+    radial-gradient(circle at 40% 80%, #2f1b0d 12px, transparent 13px),
+
+    linear-gradient(
+        to bottom,
+        #5b371d,
+        #3d2311
+    );
+
+    transition:
+    transform 2.8s cubic-bezier(.18,.89,.32,1);
+
+}
+
+/* CONTENT START */
+
+.crop-image,
+.crop-sign,
+.crop-card p{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:
+    1.4s ease;
+
+}
+
+/* SPROUT POPS UP */
+
+.crop-card.sprouted .emoji-sprout{
+
+    opacity:1;
+
+    transform:
+    translateX(-50%)
+    translateY(0)
+    scale(1);
+
+}
+/* DIRT FALLS OFF */
+
+.crop-card.grown::before{
+
+    transform:
+    translateY(130%);
+
+}
+
+/* =========================================
+   CONTENT START
+========================================= */
+
+.crop-image,
+.crop-sign,
+.crop-card p{
+
+    opacity:0;
+
+    transform:
+    translateY(80px)
+    scale(.92);
+
+    transition:
+    1.8s ease;
+
+}
+
+/* =========================================
+   CONTENT REVEAL
+========================================= */
+
+.crop-card.grown .crop-image{
+
+    opacity:1;
+
+    transform:
+    translateY(0)
+    scale(1);
+
+    transition-delay:.8s;
+
+}
+
+.crop-card.grown .crop-sign{
+
+    opacity:1;
+
+    transform:
+    translateY(0);
+
+    transition-delay:.2s;
+
+}
+
+.crop-card.grown p{
+
+    opacity:1;
+
+    transform:
+    translateY(0);
+
+    transition-delay:.5s;
+
+}
+
+/* SPROUT POPS */
+
+.crop-card.sprouted .emoji-sprout{
+
+    opacity:1;
+
+    transform:
+    translateX(-50%)
+    translateY(0)
+    scale(1);
+
+    animation:
+    sproutBounce 3s ease-in-out infinite;
+
 }
 
 /* MOBILE */
