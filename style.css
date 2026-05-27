@@ -1,5 +1,5 @@
 html{
-    font-size: 67%;
+    font-size: 85%;
 }
 *{
     margin:0;
@@ -2712,4 +2712,513 @@ footer h2{
     }
 
 }
+}
+/* =========================================
+   MOBILE OPTIMIZATION
+   ADD THIS TO THE BOTTOM OF YOUR CSS
+========================================= */
+
+@media (max-width: 950px){
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+html{
+    font-size:75%;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+.section-padding,
+.history-section,
+.invoice-section,
+.field-sky{
+    padding:80px 5% !important;
+}
+
+/* REMOVE HEAVY EFFECTS */
+
+.bg-shape,
+.sun-rays,
+.cloud,
+.crop-roots,
+.soil-rocks{
+    display:none !important;
+}
+
+*{
+    backdrop-filter:none !important;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.floating-header{
+    padding:0;
+}
+
+.header-top{
+    flex-direction:column;
+    gap:18px;
+    padding:18px 20px;
+}
+
+.logo{
+    gap:12px;
+    justify-content:center;
+    text-align:center;
+}
+
+.nav-logo{
+    width:70px;
+    height:70px;
+    transform:none;
+}
+
+.logo-text{
+    align-items:center;
+}
+
+.logo{
+    font-size:1.3rem;
+}
+
+.sub-logo{
+    font-size:.8rem;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:14px;
+}
+
+nav a{
+    font-size:.9rem;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero{
+    min-height:auto;
+    padding:
+    220px
+    5%
+    90px;
+}
+
+.hero h1{
+    font-size:clamp(2.8rem, 10vw, 4.5rem);
+    line-height:1.05;
+}
+
+.hero-text{
+    font-size:1rem;
+    line-height:1.8;
+    max-width:100%;
+}
+
+.valley-logo{
+    width:180px;
+    margin:20px auto 35px;
+}
+
+.hero-buttons{
+    flex-direction:column;
+    align-items:center;
+}
+
+.btn-primary,
+.btn-secondary{
+    width:100%;
+    max-width:320px;
+    text-align:center;
+}
+
+.hero-welcome-box{
+    grid-template-columns:1fr;
+    gap:18px;
+    margin-top:40px;
+}
+
+.welcome-card{
+    padding:24px;
+    border-radius:22px;
+}
+
+/* =========================================
+   STATS
+========================================= */
+
+.hero-stats{
+    grid-template-columns:1fr;
+    padding:0 5% 70px;
+    gap:20px;
+}
+
+.stat-box{
+    padding:35px 28px;
+    border-radius:24px;
+}
+
+.stat-box h3{
+    font-size:3rem;
+}
+
+/* =========================================
+   INVOICE
+========================================= */
+
+.invoice-paper{
+    padding:25px;
+    border-radius:18px;
+}
+
+.invoice-header{
+    flex-direction:column;
+    gap:30px;
+}
+
+.invoice-left{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+.invoice-right{
+    text-align:center;
+    width:100%;
+}
+
+.invoice-right h1{
+    font-size:2.2rem;
+}
+
+.invoice-meta{
+    justify-content:center;
+    gap:20px;
+}
+
+.invoice-clients{
+    grid-template-columns:1fr;
+    gap:30px;
+}
+
+.invoice-stamp{
+    font-size:1.5rem;
+    padding:16px 28px;
+}
+
+.table-head,
+.table-row{
+    grid-template-columns:
+    100px
+    1fr
+    80px;
+    font-size:.8rem;
+}
+
+.table-head div,
+.table-row div{
+    padding:14px 10px;
+}
+
+.invoice-total{
+    grid-template-columns:1fr;
+}
+
+.total-empty{
+    display:none;
+}
+
+.total-title{
+    padding:20px;
+    border-right:none;
+    border-bottom:1px solid rgba(0,0,0,.1);
+}
+
+.total-amount{
+    justify-content:center;
+    padding:20px;
+    font-size:1.6rem;
+}
+
+/* =========================================
+   HISTORY SECTION
+========================================= */
+
+.history-section{
+    overflow:hidden;
+}
+
+.history-worker{
+    display:none !important;
+}
+
+.stack-header h2{
+    font-size:clamp(2.4rem, 9vw, 4rem);
+}
+
+.history-box{
+    grid-template-columns:1fr;
+    gap:18px;
+    padding:24px;
+}
+
+.box-year{
+    font-size:2rem;
+}
+
+.box-content h3{
+    font-size:1.5rem;
+}
+
+.history-box::after{
+    display:none;
+}
+
+/* =========================================
+   PRODUCE FIELD
+========================================= */
+
+.field-sky{
+    padding:
+    120px
+    5%
+    100px;
+}
+
+.field-sky h2{
+    font-size:clamp(2.5rem, 10vw, 4rem);
+}
+
+.field-subtitle{
+    font-size:1rem;
+}
+
+.sun{
+    width:100px;
+    height:100px;
+    top:40px;
+    right:20px;
+}
+
+.soil-top{
+    top:-40px;
+    height:90px;
+}
+
+.crop-grid{
+    grid-template-columns:1fr;
+    gap:55px;
+}
+
+.crop-card{
+    min-height:auto;
+}
+
+.crop-image{
+    width:140px;
+    height:140px;
+    margin-top:20px;
+}
+
+.crop-sign{
+    font-size:.9rem;
+    padding:10px 18px;
+}
+
+.crop-card p{
+    max-width:100%;
+    padding:0 10px;
+}
+
+.harvest-divider{
+    font-size:1.5rem;
+    letter-spacing:3px;
+    margin:
+    50px
+    0
+    10px;
+}
+
+.emoji-sprout{
+    font-size:5rem;
+    bottom:-150px;
+}
+
+/* =========================================
+   FARM LIFE
+========================================= */
+
+.farm-life{
+    margin:40px 5%;
+    border-radius:24px;
+    min-height:auto;
+}
+
+.farm-life-content{
+    padding:60px 25px;
+}
+
+.farm-life h2{
+    font-size:clamp(2.2rem, 8vw, 3.2rem);
+}
+
+.farm-life p{
+    font-size:1rem;
+}
+
+.quote-box{
+    padding:24px;
+    font-size:1rem;
+}
+
+/* =========================================
+   SEASONAL
+========================================= */
+
+.season-grid{
+    grid-template-columns:1fr;
+}
+
+.season-card{
+    padding:35px 25px;
+}
+
+/* =========================================
+   NOTEBOOK GALLERY
+========================================= */
+
+.gallery-section{
+    padding:80px 15px;
+}
+
+.gallery-title{
+    font-size:2.4rem;
+}
+
+.notebook{
+    width:100%;
+    height:500px;
+    padding:
+    50px
+    15px
+    90px;
+
+    border-width:8px;
+}
+
+.spiral{
+    gap:10px;
+}
+
+.spiral span{
+    width:14px;
+    height:45px;
+    border-width:3px;
+}
+
+.gallery-buttons{
+    bottom:20px;
+    gap:12px;
+}
+
+.gallery-buttons button{
+    padding:12px 20px;
+    font-size:.9rem;
+}
+
+/* =========================================
+   FAMILY
+========================================= */
+
+.family-grid{
+    grid-template-columns:1fr;
+    gap:35px;
+}
+
+.family-text h2{
+    font-size:2.5rem;
+}
+
+/* =========================================
+   VISIT
+========================================= */
+
+.visit-grid{
+    grid-template-columns:1fr;
+}
+
+.visit-card{
+    padding:32px 24px;
+}
+
+.visit-card h3{
+    font-size:1.7rem;
+}
+
+.farm-map{
+    height:220px;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer{
+    padding:70px 20px;
+}
+
+footer h2{
+    font-size:2.1rem;
+}
+
+.footer-links{
+    gap:14px;
+}
+
+/* =========================================
+   PERFORMANCE IMPROVEMENTS
+========================================= */
+
+/* REMOVE EXPENSIVE SHADOWS */
+
+.stat-box,
+.visit-card,
+.season-card,
+.welcome-card,
+.crop-image,
+.invoice-paper{
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.12) !important;
+}
+
+/* REMOVE LARGE BLURS */
+
+.valley-logo,
+.crop-image,
+.history-worker{
+    filter:none !important;
+}
+
+/* REDUCE ANIMATION LOAD */
+
+.cloud,
+.sun-rays{
+    animation:none !important;
+}
+
+/* SLOWER/SIMPLER TRANSITIONS */
+
+*{
+    transition-duration:.25s !important;
+}
+
 }
