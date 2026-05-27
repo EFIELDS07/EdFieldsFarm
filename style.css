@@ -1,9 +1,11 @@
+html{
+    font-size: 85%;
+}
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
-
 :root{
     --green:#234126;
     --green-light:#2f5d34;
