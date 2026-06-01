@@ -205,3 +205,39 @@ new IntersectionObserver(entries => {
 });
 
 sproutObserver.observe(produceSection);
+
+const farmLifeSection =
+document.querySelector(".farm-life-wrapper");
+
+const farmObserver =
+new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+            farmLifeSection.classList.add("pulling");
+
+            farmObserver.disconnect();
+
+        }
+
+    });
+
+},{
+    threshold:.3
+});
+
+farmObserver.observe(farmLifeSection);
+
+const revealBtn =
+document.getElementById("revealPrices");
+
+const cover =
+document.querySelector(".inspector-cover");
+
+revealBtn.addEventListener("click", () => {
+
+    cover.classList.add("revealed");
+
+});

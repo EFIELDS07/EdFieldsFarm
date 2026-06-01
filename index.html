@@ -13,98 +13,109 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <!-- FLOATING BACKGROUND SHAPES -->
     <div class="bg-shape shape1"></div>
     <div class="bg-shape shape2"></div>
 
     <!-- HEADER -->
 
-<header class="floating-header">
+<header class="hanging-nav">
 
-    <div class="fresh-banner">
-        🌽 Fresh Sweet Corn Picked Daily • Open 8AM–5PM
+    <div class="chainnav chainnav-left"></div>
+    <div class="chainnav chainnav-right"></div>
+
+
+    <div class="wood-sign">
+
+    <!-- BOLTS -->
+
+    <div class="chain-bolt bolt-left"></div>
+    <div class="chain-bolt bolt-right"></div>
+
+    <!-- BRAND -->
+
+    <div class="wood-brand">
+
+        <img src="images/logo.png"
+             class="wood-logo">
+
+        <div>
+            <h2>Ed Fields & Sons</h2>
+            <span>Since 1942 • Andover, Minnesota</span>
+        </div>
+
     </div>
 
-    <div class="header-top">
+    <!-- NAV -->
 
-        <div class="logo">
-
-    <img 
-        src="images/logo.png" 
-        alt="Heart of the Valley"
-        class="nav-logo">
-
-    <div class="logo-text">
-        Ed Fields & Sons
-
-        <span class="sub-logo">
-            Family Farm • Andover, Minnesota
-        </span>
-    </div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#history">History</a>
+        <a href="#produce">Produce</a>
+        <a href="#prices">Market</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#visit">Visit</a>
+    </nav>
 
 </div>
 
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#history">History</a></li>
-                <li><a href="#produce">Produce</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#visit">Visit</a></li>
-            </ul>
-        </nav>
-
-    </div>
-
 </header>
 
-    <!-- HERO -->
    <section id="home" class="hero">
 
-<video autoplay muted loop playsinline class="hero-video">
-    <source src="videos/farmvid.mp4" type="video/mp4">
-</video>
+    <video autoplay muted loop playsinline class="hero-video">
+        <source src="videos/farmvid.mp4" type="video/mp4">
+    </video>
 
-<div class="hero-overlay"></div>
-<div class="hero-content fade-up">
+    <div class="hero-overlay"></div>
 
-    <img 
-    src="images/logo.png" 
-    alt="Heart of the Valley Logo"
-    class="valley-logo">
+    <!-- SUNRISE GLOW -->
+    <div class="hero-sunrise"></div>
 
-    <p class="mini-title">
-        Fresh from the Fields
-    </p>
+    <!-- CONTENT -->
+    <div class="hero-content">
 
-        <h1>
-    <span class="farm-green">
-        Ed Fields & Sons
-    </span>
-</h1>
-<p class="hero-text">
-    For generations, Ed Fields & Sons has grown and supplied millions of pounds
-    of Minnesota produce from wholesalers and retailers to local families.
-    From radishes and carrots to potatoes, turnips, and parsnips, our fields help
-    feed communities across the Midwest while our farm market continues serving
-    the Andover community we call home.
-</p>
+        <p class="hero-kicker">
+            ESTABLISHED 1942 • FOUR GENERATIONS
         </p>
 
-        <div class="hero-buttons">
+        <h1>
+            Ed Fields & Sons
+            <span>Harvest Story</span>
+        </h1>
 
-            <a href="#produce" class="btn-primary">
-                Explore Our Produce
-            </a>
+        <p class="hero-text">
+            From our fields in Andover to your table, we are proud to grow and share the best of Minnesota's soil. 
+        </p>
 
-            <a href="#visit" class="btn-secondary">
-                Visit The Farm
-            </a>
+        <!-- STATS -->
+
+        <div class="hero-stats">
+
+            <div class="stat">
+                <strong>500+</strong>
+                <span>Acres Farmed</span>
+            </div>
+
+            <div class="stat">
+                <strong>1M+</strong>
+                <span>Pounds Harvested</span>
+            </div>
+
+            <div class="stat">
+                <strong>82</strong>
+                <span>Years Farming</span>
+            </div>
+
+            <div class="stat">
+                <strong>4</strong>
+                <span>Generations</span>
+            </div>
 
         </div>
 
     </div>
+
 </section>
 
 <!-- INVOICE -->
@@ -169,23 +180,22 @@
 <div class="invoice-clients">
 
     <div>
-        <span>SUPPLYING TO</span>
+        <span>BILL TO</span>
 
         <p>
-            Bolthouse Farms<br>
-            Bix Produce<br>
-            Fareway<br>
-            Russ Davis Wholesale
+            ED FIELDS AND SONS<br>
+            15421 Round Lake Blvd NW<br>
+            Andover, MN 55304<br>
+            USA<br>
         </p>
     </div>
 
     <div>
-        <span>DISTRIBUTION</span>
+        <span>SHIP TO</span>
 
         <p>
-            Midwest Produce Operations<br>
-            Wholesale Distribution<br>
-            Retail + Processing
+            763-421-5283<br>
+            Charlie@edfieldsandsons
         </p>
     </div>
 
@@ -228,7 +238,7 @@
             <div class="table-row">
                 <div>PART66</div>
                 <div>Wholesale and retail produce partnerships</div>
-                <div>100+</div>
+                <div>50+</div>
             </div>
 
             <div class="table-row">
@@ -275,10 +285,10 @@
 
 <section id="history" class="history-section">
 
-  <img 
-    src="images/farmer.png"
-    alt=""
-    class="history-worker">
+    <img
+        src="images/farmer.png"
+        alt=""
+        class="history-worker">
 
     <!-- STACKED PALLET -->
 
@@ -303,16 +313,62 @@
         <div class="history-box">
 
             <div class="box-year">
+                1930s
+            </div>
+
+            <div class="box-content">
+
+                <h3>Animal Farm Beginnings</h3>
+
+                <p>
+                    Nearly a century ago, Ed Fields purchased his first small piece of land
+                    in Andover, Minnesota where he lived alongside his wife, Lorraine, and their eight children.
+                    They intended on living an independent farm life, raising livestock and growing a family garden.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- BOX -->
+
+        <div class="history-box">
+
+            <div class="box-year">
                 1942
             </div>
 
             <div class="box-content">
 
-                <h3>Goat Farm Beginnings</h3>
+                <h3>Expansion Into Produce</h3>
 
                 <p>
-                    What began as a small goat farm laid the foundation
-                    for generations of Minnesota agriculture.
+                    In the year 1942, Ed saw an opportunity to grow beyond a traditional
+                    family farm. He expanded production, planting the first seeds of what
+                    would become a lasting produce legacy.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- BOX -->
+
+        <div class="history-box">
+
+            <div class="box-year">
+                1950s
+            </div>
+
+            <div class="box-content">
+
+                <h3>Birth of Heart of the Valley</h3>
+
+                <p>
+                    In the 1950s, Ed's sister, Sister Mary, helped inspire
+                    the creation of the Heart of the Valley brand. What began as a way to
+                    bring the family's produce directly to local consumers soon became a
+                    trusted name throughout Midwest. 
                 </p>
 
             </div>
@@ -329,32 +385,11 @@
 
             <div class="box-content">
 
-                <h3>Expansion Into Produce</h3>
-
-                <p>
-                    The farm evolved into large-scale vegetable production,
-                    growing radishes, carrots, potatoes, onions, and more.
-                </p>
-
-            </div>
-
-        </div>
-
-        <!-- BOX -->
-
-        <div class="history-box">
-
-            <div class="box-year">
-                1980s
-            </div>
-
-            <div class="box-content">
-
                 <h3>Wholesale Growth</h3>
 
                 <p>
-                    Millions of pounds of produce began moving through
-                    wholesalers, retailers, processors, and distributors.
+                    By the 1960s, Ed Fields and Sons was a well-established and successful operation. The farm's reputation for quality and reliability 
+                    continued to grow as the family expanded both its acreage and operations to meet demand.
                 </p>
 
             </div>
@@ -371,11 +406,12 @@
 
             <div class="box-content">
 
-                <h3>Heart of the Valley</h3>
+                <h3>Growing for the Future</h3>
 
                 <p>
-                    Today, Ed Fields & Sons continues supplying the Midwest
-                    while proudly serving the local community market.
+                    Generations later,Ed's sons and grandsons continue the family farming tradition, carrying
+                    forward the values of hard work, quality, and dedication that Ed instilled
+                    in the family. 
                 </p>
 
             </div>
@@ -385,7 +421,6 @@
     </div>
 
 </section>
-
 <!-- PRODUCE FIELD -->
 
 <section id="produce" class="produce-field-section">
@@ -435,13 +470,13 @@
             <div class="crop-card">
                 <div class="emoji-sprout">🌱</div>
                 <img 
-                    src="https://images.unsplash.com/photo-1566486189376-d5b4f1c9b8b3?q=80&w=1200&auto=format&fit=crop"
+                    src="https://www.leppfarmmarket.com/wp-content/uploads/2022/05/207872963_10159163374409898_6552234989376435656_n.jpg?q=80&w=1200&auto=format&fit=crop"
                     class="crop-image">
 
                 <div class="tiny-roots"></div>
 
                 <div class="crop-sign">
-                    CUCUMBERS
+                    PICKLING CUCUMBERS
                 </div>
 
                 <p>
@@ -453,7 +488,7 @@
             <div class="crop-card">
                 <div class="emoji-sprout">🌱</div>
                 <img 
-                    src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?q=80&w=1200&auto=format&fit=crop"
+                    src="https://growhoss.com/cdn/shop/products/florida-91-tomato.jpg?v=1691780910&q=80&w=1200&auto=format&fit=crop"
                     class="crop-image">
 
                 <div class="tiny-roots"></div>
@@ -463,7 +498,7 @@
                 </div>
 
                 <p>
-                    Botanically a fruit, but grown like a field vegetable.
+                    Is it a fruit? Is it a vegetable? It's the worlds most consumed produce item.
                 </p>
 
             </div>
@@ -471,7 +506,7 @@
             <div class="crop-card">
                 <div class="emoji-sprout">🌱</div>
                 <img 
-                    src="https://cdn11.bigcommerce.com/s-rl94rv7pw2/images/stencil/1280x1280/products/2668/2370/thumbnail__68330.1756739415.jpg?c=1"
+                    src="https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_crop_radishes_1600.jpg?itok=pcXp0ZMV"
                     class="crop-image">
 
                 <div class="tiny-roots"></div>
@@ -489,17 +524,17 @@
             <div class="crop-card">
                 <div class="emoji-sprout">🌱</div>
                 <img 
-                    src="https://hub.suttons.co.uk/wp-content/uploads/2023/04/four-fully-grown-sweetcorn-green-husk-1.jpg"
+                    src="https://media.istockphoto.com/id/178369146/photo/melons.jpg?s=612x612&w=0&k=20&c=D5P_6AVAVXPaC7eHUoEGwpaneSVoRm4fXDyfleGnUQs="
                     class="crop-image">
 
                 <div class="tiny-roots"></div>
 
                 <div class="crop-sign">
-                    SWEET CORN
+                    MELLONS
                 </div>
 
                 <p>
-                    Picked fresh daily during peak Minnesota harvest.
+                    Summers sweetest treat.
                 </p>
 
             </div>
@@ -541,11 +576,11 @@
                 <div class="tiny-roots"></div>
 
                 <div class="crop-sign">
-                    BEETS
+                    POTATOES
                 </div>
 
                 <p>
-                    Naturally rich in nitrates and deep earthy flavor.
+                    One of the most versatile and widely consumed vegetables in the world.
                 </p>
 
             </div>
@@ -553,13 +588,13 @@
             <div class="crop-card">
 
                 <img 
-                    src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?q=80&w=1200&auto=format&fit=crop"
+                    src="https://www.almanac.com/sites/default/files/styles/or/public/image_nodes/beets_by_darasp_kran_ss_crop_0.jpg?itok=QPgLhiL_?q=80&w=1200&auto=format&fit=crop"
                     class="crop-image">
 
                 <div class="tiny-roots"></div>
 
                 <div class="crop-sign">
-                    PUMPKINS
+                    BEETS
                 </div>
 
                 <p>
@@ -599,7 +634,7 @@
             <div class="crop-card">
 
                 <img 
-                    src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?q=80&w=1200&auto=format&fit=crop"
+                    src="https://gardenplannerwebsites.blob.core.windows.net/blog/parsnip-masterclass-harvested-2x.jpg?q=80&w=1200&auto=format&fit=crop"
                     class="crop-image">
 
                 <div class="tiny-roots"></div>
@@ -617,7 +652,7 @@
             <div class="crop-card">
 
                 <img 
-                    src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?q=80&w=1200&auto=format&fit=crop"
+                    src="https://gardenerspath.com/wp-content/uploads/2019/09/How-to-Plant-and-Grow-Turnips-FB.jpg?q=80&w=1200&auto=format&fit=crop"
                     class="crop-image">
 
                 <div class="tiny-roots"></div>
@@ -653,17 +688,17 @@
             <div class="crop-card">
 
                 <img 
-                    src="https://images.unsplash.com/photo-1628773822503-930a7eaecf80?q=80&w=1200&auto=format&fit=crop"
+                    src="https://anniesheirloomseeds.com/cdn/shop/files/American-Purple-Top-Rutabaga__94216.1723484535.1280.1280.jpg?v=1724264188?q=80&w=1200&auto=format&fit=crop"
                     class="crop-image">
 
                 <div class="tiny-roots"></div>
 
                 <div class="crop-sign">
-                    DILL
+                    RUTABAGAS
                 </div>
 
                 <p>
-                    Essential for Midwest pickle season every summer.
+                    A vegetable that thrives in the frosty Minnesota climate.p
                 </p>
 
             </div>
@@ -674,33 +709,322 @@
 
 </section>
 
+<!-- PRICES SECTION -->
 
-<!-- FARM LIFE -->
+<section class="market-section" id="prices">
 
-<section class="farm-life section-padding">
+    <div class="market-container">
 
-    <div class="farm-life-overlay"></div>
+        <div class="market-header">
 
-    <div class="farm-life-content">
+            <p class="market-tag">
+                UPDATED DAILY
+            </p>
 
-        <p class="section-tag">
-            REAL FARM LIFE
-        </p>
+            <h2>
+                Farm Stand Prices
+            </h2>
 
-        <h2>
-            Boots Dirty. Hands Rough. Produce Fresh.
-        </h2>
+            <p class="market-subtitle">
+                Fresh picked produce available at our Andover farm stand.
+            </p>
+
+        </div>
+
+        <div class="price-board">
+<div class="inspector-cover">
+
+    <div class="inspection-card">
+
+        <h3>⚠ PRICE INSPECTION IN PROGRESS ⚠</h3>
 
         <p>
-            Long mornings, muddy boots, dusty trucks, and generations
-            of hard work. That’s what farming means to the Fields family.
+            These prices are currently under review by highly trained
+            produce professionals.
         </p>
 
-        <div class="quote-box">
-            “The land gives back exactly what you pour into it.”
-            <span>
-                — Chuck Fields
-            </span>
+        <button id="revealPrices">
+            Click Here If You're Not A Food Inspector
+        </button>
+
+    </div>
+
+</div>
+<div class="produce-prices">
+
+    <!-- RED BEETS -->
+
+    <div class="produce-group">
+
+        <h3>RED BEETS</h3>
+
+        <div class="price-row">
+            <span>2 LB BAG</span>
+            <div class="dots"></div>
+            <strong>$2.75</strong>
+        </div>
+
+        <div class="price-row">
+            <span>5 LB BAG</span>
+            <div class="dots"></div>
+            <strong>$7.50</strong>
+        </div>
+
+        <div class="price-row">
+            <span>12 COUNT</span>
+            <div class="dots"></div>
+            <strong>$21.00</strong>
+        </div>
+
+        <div class="price-row">
+            <span>25 LB</span>
+            <div class="dots"></div>
+            <strong>$19.00</strong>
+        </div>
+
+    </div>
+
+    <!-- GOLD BEETS -->
+
+    <div class="produce-group">
+
+        <h3>GOLD BEETS</h3>
+
+        <div class="price-row">
+            <span>5 LB BAG</span>
+            <div class="dots"></div>
+            <strong>$8.00</strong>
+        </div>
+
+        <div class="price-row">
+            <span>25 LB BAG</span>
+            <div class="dots"></div>
+            <strong>$21.00</strong>
+        </div>
+
+    </div>
+
+    <!-- PARSNIPS -->
+
+    <div class="produce-group">
+
+        <h3>PARSNIPS</h3>
+
+        <div class="price-row">
+            <span>2 LB BAG</span>
+            <div class="dots"></div>
+            <strong>$3.00</strong>
+        </div>
+
+        <div class="price-row">
+            <span>12 COUNT</span>
+            <div class="dots"></div>
+            <strong>$27.50</strong>
+        </div>
+
+        <div class="price-row">
+            <span>20 LB BAG</span>
+            <div class="dots"></div>
+            <strong>$25.00</strong>
+        </div>
+
+    </div>
+
+    <!-- TURNIPS -->
+
+    <div class="produce-group">
+
+        <h3>TURNIPS</h3>
+
+        <div class="price-row">
+            <span>2 LB BAG</span>
+            <div class="dots"></div>
+            <strong>$3.00</strong>
+        </div>
+
+        <div class="price-row">
+            <span>12 COUNT</span>
+            <div class="dots"></div>
+            <strong>$27.50</strong>
+        </div>
+
+        <div class="price-row">
+            <span>25 LB BAG</span>
+            <div class="dots"></div>
+            <strong>$25.00</strong>
+        </div>
+
+    </div>
+
+    <!-- POTATOES -->
+
+    <div class="produce-group">
+
+        <h3>POTATOES</h3>
+
+        <div class="price-row">
+            <span>20 LB RUSSET</span>
+            <div class="dots"></div>
+            <strong>$7.00</strong>
+        </div>
+
+        <div class="price-row">
+            <span>50 LB RUSSET</span>
+            <div class="dots"></div>
+            <strong>$12.00</strong>
+        </div>
+
+        <div class="price-row">
+            <span>20 LB RED</span>
+            <div class="dots"></div>
+            <strong>$8.00</strong>
+        </div>
+
+        <div class="price-row">
+            <span>50 LB RED</span>
+            <div class="dots"></div>
+            <strong>$14.00</strong>
+        </div>
+    </div>
+
+    <!-- RUTABAGA -->
+
+    <div class="produce-group">
+
+        <h3>RUTABAGA</h3>
+
+        <div class="price-row">
+            <span>1 LB</span>
+            <div class="dots"></div>
+            <strong>$1.10</strong>
+        </div>
+
+        <div class="price-row">
+            <span>25 LB BAG</span>
+            <div class="dots"></div>
+            <strong>$25.00</strong>
+        </div>
+
+    </div>
+
+    <!-- RED RADISHES -->
+
+    <div class="produce-group">
+
+        <h3>RED RADISHES</h3>
+
+        <div class="price-row">
+            <span>1 BUNCH</span>
+            <div class="dots"></div>
+            <strong>$1.75</strong>
+        </div>
+
+        <div class="price-row">
+            <span>1 LB BAG</span>
+            <div class="dots"></div>
+            <strong>$2.00</strong>
+        </div>
+        
+         <div class="price-row">
+            <span>5 LB BAG</span>
+            <div class="dots"></div>
+            <strong>$7.50</strong>
+        </div>
+
+            <div class="price-row">
+            <span>25 LB BAG</span>
+            <div class="dots"></div>
+            <strong>$23.00</strong>
+        </div>
+
+            <div class="price-row">
+            <span>40 LB BAG</span>
+            <div class="dots"></div>
+            <strong>$36.00</strong>
+        </div>
+
+            <div class="price-row">
+            <span>24 COUNT GTR</span>
+            <div class="dots"></div>
+            <strong>$21.00</strong>
+        </div>
+
+            <div class="price-row">
+            <span>48 COUNT GTD</span>
+            <div class="dots"></div>
+            <strong>$32.00</strong>
+        </div>
+
+    </div>
+
+    <!-- WHITE RADISHES -->
+
+    <div class="produce-group">
+
+        <h3>WHITE RADISHES</h3>
+
+        <div class="price-row">
+            <span>1 BUNCH</span>
+            <div class="dots"></div>
+            <strong>$2</strong>
+        </div>
+
+        <div class="price-row">
+            <span>12 COUNT</span>
+            <div class="dots"></div>
+            <strong>$16.00</strong>
+        </div>
+
+    </div>
+
+</div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="farm-life-wrapper">
+
+    <!-- TRACTOR -->
+
+    <div class="tractor-scene">
+        <div class="dust-cloud"></div>
+
+        <img
+            src="images/tractor.png"
+            alt="Tractor"
+            class="tractor">
+
+        <div class="tractor-rope"></div>
+
+    </div>
+
+    <!-- CARD -->
+
+    <div class="farm-card">
+
+        <div class="farm-card-content">
+
+            <p class="section-tag">
+                REAL FARM LIFE
+            </p>
+
+            <h2>
+                If you ate today, thank a farmer
+            </h2>
+
+            <p class="farm-description">
+                Farming is one of the most demanding ways of life. It requires grit, patience, and determination through every season. Every seed planted is an act of faith, every harvest a reward earned through months of uncertainty and hours of labor. Farmers face long days, unpredictable weather, rising costs, and risks most people never see—yet they continue because feeding others is more than a job; it's a responsibility. While much of the world sleeps, farmers are working to ensure there's food on tomorrow's table.
+            </p>
+
+            <div class="quote-box">
+                “The land gives back exactly what you pour into it.”
+                <span>
+                    — Chuck Fields
+                </span>
+            </div>
+
         </div>
 
     </div>
@@ -709,178 +1033,290 @@
 
 <!-- NOTEBOOK SECTION -->
 <section class="gallery-section">
-  <h2 class="gallery-title">Farm Gallery</h2>
 
-  <div class="notebook">
+    <h2 class="gallery-title">
+        Farm Gallery
+    </h2>
 
-    <!-- Spiral -->
-    <div class="spiral">
-      <span></span><span></span><span></span><span></span>
-      <span></span><span></span><span></span><span></span>
-      <span></span><span></span>
-    </div>
+    <div class="notebook">
 
-    <!-- Pages -->
-    <div class="gallery-pages">
+        <!-- SPIRAL -->
 
-  <div class="page active">
-    <img src="https://ocj.com/wp-content/uploads/2017/12/youbeenfarminglong.jpg" alt="">
-  </div>
-
-  <div class="page">
-    <img src="https://scontent.ffcm1-1.fna.fbcdn.net/v/t39.30808-6/550063755_1630517375025615_7616880580582253175_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ngL1MJyPwfAQ7kNvwFFjOYt&_nc_oc=Adr-m_LLnQiM0vzaiNUEnq6sWVf6aonXz2TQ9B-o7Bw13WCmIOgPQq3hTWJYAhbmZLrqXApYziW7lOid2-O2hfOH&_nc_zt=23&_nc_ht=scontent.ffcm1-1.fna&_nc_gid=34McBGLE41FkywKLPzj3VA&_nc_ss=7b2a8&oh=00_Af7utJ6ZkEznH3R4S3P-WMW9y3FevK5oZYYcLW0YFDKoeg&oe=6A18385C" alt="">
-  </div>
-
-  <div class="page">
-    <img src="https://a9effd958e0dc59aaf3b-80520a33cc33a15351bd958c9b8ecc55.ssl.cf2.rackcdn.com/Homegrown/Images/Ed-Fields-Sons.webp" alt="">
-  </div>
-
-  <div class="page">
-    <img src="https://scontent.ffcm1-1.fna.fbcdn.net/v/t39.30808-6/294567236_575969510633327_3112633011704150478_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=qJLyEtCnrcQQ7kNvwEwLiEU&_nc_oc=AdoqUH2--dsDC1wHuBalPQqJkrgcKh_hlC9AnOz3Cm6cAypwYqXH6OEbns-xgh4Yht6Ug4c31OGvvVjyVoN5OyzF&_nc_zt=23&_nc_ht=scontent.ffcm1-1.fna&_nc_gid=AEcdLLdMC6fv50v5m-76kw&_nc_ss=7b2a8&oh=00_Af4GtR298L7wc4BTUTC8SXGvswVWXT6kYChfQO1-lxQB5Q&oe=6A1845E0" alt="">
-  </div>
-
-</div>
-
-    <!-- Buttons -->
-    <div class="gallery-buttons">
-      <button id="prevBtn">← Prev</button>
-      <button id="nextBtn">Next →</button>
-    </div>
-
-  </div>
-</section>
-
-    <!-- Pages -->
-    <div class="gallery-pages">
-
-      <div class="page active">
-        <img src="images/farm1.jpg" alt="">
-      </div>
-
-      <div class="page">
-        <img src="images/farm2.jpg" alt="">
-      </div>
-
-      <div class="page">
-        <img src="images/farm3.jpg" alt="">
-      </div>
-
-      <div class="page">
-        <img src="images/farm4.jpg" alt="">
-      </div>
-
-    </div>
-
-    <!-- Buttons -->
-    <div class="gallery-buttons">
-      <button id="prevBtn">← Prev</button>
-      <button id="nextBtn">Next →</button>
-    </div>
-
-  </div>
-</section>
-
-    <!--FAMILY -->
-    <section class="family-section section-padding">
-
-    <div class="family-grid">
-
-        <div class="family-image">
-            <img src="images/family.jpg" alt="">
+        <div class="spiral">
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span>
         </div>
 
-        <div class="family-text">
-            <p class="section-tag">MEET THE FARMILY</p>
+        <!-- PAGES -->
 
-            <h2>Generations Built This Farm</h2>
+        <div class="gallery-pages">
+
+            <div class="page active">
+                <img 
+                src="https://ocj.com/wp-content/uploads/2017/12/youbeenfarminglong.jpg" 
+                alt="">
+            </div>
+
+            <div class="page">
+                <img 
+                src="https://scontent.ffcm1-1.fna.fbcdn.net/v/t39.30808-6/550063755_1630517375025615_7616880580582253175_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ngL1MJyPwfAQ7kNvwFFjOYt&_nc_oc=Adr-m_LLnQiM0vzaiNUEnq6sWVf6aonXz2TQ9B-o7Bw13WCmIOgPQq3hTWJYAhbmZLrqXApYziW7lOid2-O2hfOH&_nc_zt=23&_nc_ht=scontent.ffcm1-1.fna&_nc_gid=34McBGLE41FkywKLPzj3VA&_nc_ss=7b2a8&oh=00_Af7utJ6ZkEznH3R4S3P-WMW9y3FevK5oZYYcLW0YFDKoeg&oe=6A18385C" 
+                alt="">
+            </div>
+
+            <div class="page">
+                <img 
+                src="https://a9effd958e0dc59aaf3b-80520a33cc33a15351bd958c9b8ecc55.ssl.cf2.rackcdn.com/Homegrown/Images/Ed-Fields-Sons.webp" 
+                alt="">
+            </div>
+
+            <div class="page">
+                <img 
+                src="https://scontent.ffcm1-1.fna.fbcdn.net/v/t39.30808-6/294567236_575969510633327_3112633011704150478_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=qJLyEtCnrcQQ7kNvwEwLiEU&_nc_oc=AdoqUH2--dsDC1wHuBalPQqJkrgcKh_hlC9AnOz3Cm6cAypwYqXH6OEbns-xgh4Yht6Ug4c31OGvvVjyVoN5OyzF&_nc_zt=23&_nc_ht=scontent.ffcm1-1.fna&_nc_gid=AEcdLLdMC6fv50v5m-76kw&_nc_ss=7b2a8&oh=00_Af4GtR298L7wc4BTUTC8SXGvswVWXT6kYChfQO1-lxQB5Q&oe=6A1845E0" 
+                alt="">
+            </div>
+
+        </div>
+
+        <!-- BUTTONS -->
+
+        <div class="gallery-buttons">
+
+            <button id="prevBtn">
+                ← Prev
+            </button>
+
+            <button id="nextBtn">
+                Next →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+   <!-- FAMILY -->
+
+<section class="family-section">
+
+    <div class="family-container">
+
+        <div class="family-photo">
+
+            <div class="photo-frame">
+
+                <img
+                    src="images/ed.png"
+                    alt="Ed Fields">
+
+            </div>
+
+            <div class="photo-caption">
+                The Fields Family • Farming Minnesota Soil Since 1942
+            </div>
+
+        </div>
+
+        <div class="family-content">
+
+            <p class="section-tag">
+                MEET THE FAMILY
+            </p>
+
+            <h2>
+                Four Generations of Minnesota Farming
+            </h2>
 
             <p>
-                Farming isn't just a business for the Fields family —
-                it's a way of life passed down through generations.
+                What started as a small family operation has grown into one of
+                Minnesota's trusted produce farms. Through changing seasons,
+                equipment, and generations, one thing has remained the same:
+                a commitment to growing quality produce and serving the community.
             </p>
 
             <p>
-                Every season starts before sunrise and ends with pride
-                in bringing fresh produce to Minnesota families.
+                Long before sunrise, you'll find the Fields family preparing
+                fields, harvesting crops, loading trucks, and helping customers
+                at the farm stand. Farming isn't just what we do—it's who we are.
             </p>
+
+            <div class="family-stats">
+
+                <div class="stat">
+                    <strong>1942</strong>
+                    <span>Founded</span>
+                </div>
+
+                <div class="stat">
+                    <strong>4+</strong>
+                    <span>Generations</span>
+                </div>
+
+                <div class="stat">
+                    <strong>500+</strong>
+                    <span>Acres</span>
+                </div>
+
+            </div>
+
         </div>
 
     </div>
 
 </section>
 
-    <!-- VISIT -->
-    <section id="visit" class="visit-section section-padding">
+  <!-- VISIT -->
 
-        <div class="section-header">
-            <p class="section-tag">COME SEE US</p>
-            <h2>Visit The Farm Stand</h2>
-        </div>
+<section id="visit" class="visit-section">
 
-        <div class="visit-grid">
+    <div class="farm-sign-wrapper">
 
-            <div class="visit-card">
-                <h3>Hours & Season</h3>
+        <div class="sign-post"></div>
 
-                <p><strong>Season:</strong> May – November</p>
-                <p><strong>Open:</strong> Monday – Saturday</p>
-                <p><strong>Hours:</strong> 8:00 AM – 5:00 PM</p>
+        <div class="sign-beam"></div>
+
+        <div class="chain chain-left"></div>
+        <div class="chain chain-right"></div>
+
+        <div class="farm-sign">
+
+            <h2>
+                Visit Us
+            </h2>
+
+            <div class="sign-divider"></div>
+
+            <!-- HOURS -->
+
+            <div class="visit-block">
+
+                <h3>Farm Stand Hours</h3>
+
+                <div class="visit-row">
+                    <span>Open</span>
+                    <strong>Monday – Saturday</strong>
+                </div>
+
+                <div class="visit-row">
+                    <span>Hours</span>
+                    <strong>8:00 AM – 5:00 PM</strong>
+                </div>
 
                 <div class="phone-box">
-                    (763) 421-5283
+                    (763)-421-5283
                 </div>
+
             </div>
 
-            <div class="visit-card">
-                <h3>Location</h3>
+            <div class="sign-divider"></div>
 
-                <p class="address">
-                    15421 Round Lake Blvd NW<br>
-                    Andover, MN 55304
-                </p>
+            <!-- LOCATION -->
 
-                <p class="directions">
-                    Take the Round Lake Blvd exit off Highway 10,
-                    head north for about 3 miles, and the farm stand
-                    will be on the right-hand side.
-                </p>
+            <div class="visit-block">
+
+                <h3>Find Us</h3>
+
                 <iframe
-    class="farm-map"
-    src="https://www.google.com/maps?q=15421+Round+Lake+Blvd+NW+Andover+MN&output=embed"
-    allowfullscreen=""
-    loading="lazy">
-</iframe>
+                    class="farm-map"
+                    src="https://www.google.com/maps?q=15421+Round+Lake+Blvd+NW+Andover+MN&output=embed"
+                    loading="lazy">
+                </iframe>
+
             </div>
+
         </div>
-    </section>
 
-
-    <!-- FOOTER -->
-   <footer>
-
-    <h2>Ed Fields & Sons Farm</h2>
-
-    <p>
-        Proudly serving Minnesota families with fresh produce since 1942.
-    </p>
-
-    <div class="footer-links">
-        <a href="#home">Home</a>
-        <a href="#produce">Produce</a>
-        <a href="#visit">Visit</a>
-        <a href="#gallery">Gallery</a>
     </div>
 
-    <a href="https://www.facebook.com/" target="_blank" class="footer-btn">
-        Follow Us On Facebook
-    </a>
+</section>
 
-    <p class="copyright">
-        Built In Minnesota • © 2026 Ed Fields & Sons Farm
-    </p>
+   <footer class="farm-footer">
+
+    <!-- FOOTPRINTS -->
+
+    <div class="mud-trail">
+
+        <span class="track t1">👣</span>
+        <span class="track t2">👣</span>
+        <span class="track t3">👣</span>
+        <span class="track t4">👣</span>
+
+    </div>
+
+    <div class="footer-content">
+
+        <p class="footer-tag">
+            MINNESOTA GROWN • FAMILY OWNED
+        </p>
+
+        <h2>
+            Ed Fields & Sons Farm
+        </h2>
+
+        <p class="footer-description">
+
+            Proudly growing fresh produce for Minnesota families
+            since 1942.
+
+        </p>
+
+        <nav class="footer-nav">
+
+            <a href="#home">Home</a>
+            <a href="#history">History</a>
+            <a href="#produce">Produce</a>
+            <a href="#prices">Prices</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#visit">Visit</a>
+
+        </nav>
+
+        <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            class="footer-button">
+
+            Follow Us On Facebook
+
+        </a>
+
+        <div class="boot-row">
+
+            🚜 🌾
+
+        </div>
+
+        <div class="footer-quote">
+
+            Boots Dirty • Hands Rough • Produce Fresh
+
+        </div>
+
+        <p class="footer-copy">
+
+            Built In Minnesota • © 2026 Ed Fields & Sons Farm
+
+        </p>
+
+    </div>
 
 </footer>
 
     <script src="script.js"></script>
+
+<!-- FLOATING MARKET BUTTON -->
+
+<a href="#prices" class="market-float">
+
+    <img 
+    src="images/marketstand.png" 
+    alt="Market Stand">
+
+    <div class="market-float-bubble">
+        Updated Prices
+    </div>
+
+</a>
 </body>
 </html>
