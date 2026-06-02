@@ -3293,241 +3293,78 @@ h3{
 
 ******************************************/
 
-
-
-/* GLOBAL */
-
-
-
-html{
-
-    font-size:65%;
-
-}
-
-
-
-html,
-
-body{
-
-    max-width:100%;
-
-    overflow-x:hidden;
-
-}
-
-
-
-.bg-shape,
-
-.sun-rays,
-
-.cloud,
-
-.soil-rocks{
-
-    display:none;
-
-}
-
-
-
 /* MOBILE NAV */
-
-
-
-.chainnav{
-
-    display:block;
-
-
-
-    width:4px;
-
-    height:35px;
-
-}
-
-
-
-.chainnav-left{
-
-    left:12.25%;
-
-}
-
-
-
-.chainnav-right{
-
-    right:12.25%;
-
-}
-
-.chain-bolt{
-
-    display:block;
-
-
-
-    width:10px;
-
-    height:10px;
-
-
-
-    top:5px;
-
-}
-
-
-
-.bolt-left{
-
-    left:12%;
-
-    transform:translateX(-50%);
-
-}
-
-
-
-.bolt-right{
-
-    right:12%;
-
-    transform:translateX(50%);
-
-}
-
-
-
 .wood-sign{
-
-
-
     width:100%;
-
-    margin-top:25px;
-
     height:auto;
-
+    top: -30px;
     padding:10px 15px;
-
     border-radius:0;
-
     clip-path:none;
-
-    animation:none;
-
     display:flex;
-
-    flex-direction:column;
-
     gap:8px;
-
-    animation:mobileSwing 4s ease-in-out infinite;
-
+    flex-direction:column;
+    animation:mobileSwing 3s ease-in-out infinite;
     transform-origin:center top;
-
+    background: rgba(123,77,41,.92);
+    backdrop-filter:blur(10px);
 }
-
-
-
 .wood-brand{
-
     display:flex;
-
     flex-direction:row;
-
-
-
     justify-content:center;
-
     align-items:center;
-
-
-
     gap:10px;
-
-
-
     text-align:left;
-
 }
-
-
-
 .wood-logo{
-
     width:30px;
-
 }
-
-
 
 .wood-brand h2{
-
     font-size:1rem;
-
-
-
     margin:0;
-
 }
-
-
-
 .wood-brand span{
-
     display:none;
-
 }
-
-
-
 .wood-sign nav{
-
     display:flex;
-
-
-
     justify-content:center;
-
-
-
     flex-wrap:wrap;
-
-
-
     gap:12px;
-
 }
-
-
-
 .wood-sign nav a{
-
     font-size:.75rem;
-
 }
-
-.wood-sign{
-
-    background:
-
-    rgba(123,77,41,.92);
-
-
-
-    backdrop-filter:blur(10px);
-
+.chainnav{
+    display:block;
+    width:4px;
+    height:55px;
+    transform: translateY(-15px);
+}
+.chainnav-left{
+    left:12.25%;
+}
+.chainnav-right{
+    right:12.25%;
+}
+.chain-bolt{
+    display:block;
+    width:10px;
+    height:10px;
+    top:5px;
+}
+.bolt-left{
+    left:12%;
+    transform:translateX(-50%);
+}
+.bolt-right{
+    right:12%;
+    transform:translateX(50%);
 }
 
 @keyframes mobileSwing{
-
-
 
     0%{
 
@@ -3535,11 +3372,9 @@ body{
 
             perspective(1200px)
 
-            rotateX(8deg);
+            rotateX(10deg);
 
     }
-
-
 
     50%{
 
@@ -3547,11 +3382,9 @@ body{
 
             perspective(1200px)
 
-            rotateX(-10deg);
+            rotateX(-12deg);
 
     }
-
-
 
     100%{
 
@@ -3559,22 +3392,19 @@ body{
 
             perspective(1200px)
 
-            rotateX(8deg);
+            rotateX(10deg);
 
     }
-
-
-
 }
-
 
 /* HERO */
 
 .hero {
     position: relative;
     width: 100%;
+    height: 111vh;
     padding: 100px 4% 90px;
-    margin-top: 0;
+    margin-top: -60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -3582,6 +3412,7 @@ body{
 }
 
 /* VIDEO */
+
 .hero-video {
     position: absolute;
     top: 0;
@@ -3591,11 +3422,13 @@ body{
 
     width: 100%;
     height: 100%;
+
     object-fit: cover;
     display: block;
 }
 
 /* CONTENT */
+
 .hero-content {
     position: relative;
     z-index: 5;
@@ -3603,25 +3436,23 @@ body{
     color: #fff;
 }
 
-/* KICKER */
 .hero-kicker {
     font-size: 0.7rem;
     letter-spacing: 1.5px;
     margin-bottom: 10px;
 }
 
-/* TITLE */
 .hero h1 {
     font-size: 3.5rem;
     line-height: 1.1;
     margin: 0;
 }
 
-/* PARAGRAPH */
 .hero-text {
-    font-size: .8rem;
+    font-size: 0.8rem;
     line-height: 1.8;
     margin-top: 20px;
+
     max-width: 280px;
     margin-left: auto;
     margin-right: auto;
@@ -3774,11 +3605,7 @@ body{
     opacity: 0.25; /* soften industrial texture */
   }
 
-  /* =========================
-     WORKER
-  ========================= */
-
-  .history-worker {
+    .history-worker {
     display: none;
   }
 
@@ -4027,27 +3854,77 @@ body{
   /* =========================
      PRICE BOARD
   ========================= */
- .price-board {
-    padding: 20px 16px;
+ @media (max-width: 950px) {
+
+  .market-section {
+    padding: 90px 5%;
+  }
+
+  /* =========================
+     PRICE BOARD (MOBILE REDESIGN)
+  ========================= */
+
+  .price-board {
+    padding: 18px;
     border-width: 8px;
+    border-radius: 18px;
   }
 
+  /* turn grid into stacked layout */
   .produce-prices {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
   }
 
-.produce-prices h3 {
-    font-size: 1rem;
+  /* =========================
+     CATEGORY BLOCKS
+  ========================= */
+
+  .produce-group {
+    padding: 14px 14px;
+    border-radius: 14px;
+
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .produce-prices h3 {
+    font-size: 1.1rem;
+    margin: 0 0 10px;
+    letter-spacing: 2px;
+  }
+
+  /* =========================
+     PRICE ROWS (COMPACT)
+  ========================= */
+
+  .price-row {
+    padding: 8px 0;
   }
 
   .price-row span {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
   }
 
   .price-row strong {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
+
+  .price-row .dots {
+    margin: 0 8px;
+    border-bottom: 1px dotted rgba(255,255,255,.2);
+  }
+
+  /* =========================
+     OPTIONAL: REMOVE EXTRA SPACING
+  ========================= */
+
+  .produce-prices h3:first-child {
+    margin-top: 0;
+  }
+}
 
 /* FARM LIFE */
 @media (max-width: 950px) {
