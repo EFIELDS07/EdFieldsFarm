@@ -3442,27 +3442,28 @@ body{
 
 .hero-content {
     position: relative;
+    padding: 30px;
     z-index: 5;
     text-align: center;
     color: #fff;
 }
 
 .hero-kicker {
-    font-size: 0.7rem;
+    font-size: 0.55rem;
     letter-spacing: 1.5px;
     margin-bottom: 10px;
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 3.3rem;
     line-height: 1.1;
     margin: 0;
 }
 
 .hero-text {
     font-size: 0.8rem;
-    line-height: 1.8;
-    margin-top: 20px;
+    line-height: 1.5;
+    margin-top: 10px;
     max-width: 280px;
     margin-left: auto;
     margin-right: auto;
@@ -4009,10 +4010,10 @@ body{
   }
 
   .tractor-rope{
-      left:-15px;
+      left:-25px;
       top:50%;
-      z-index: 1;
-      width:55px;
+      z-index: -111;
+      width:50px;
       height:4px;
 
       transform:translateY(-50%);
@@ -4023,7 +4024,7 @@ body{
   }
 
   .farm-life-wrapper.pulling .tractor-rope{
-      animation: ropeDrive 2.5s linear forwards;
+      animation: ropeDrive 2.53s linear forwards;
   }
 
   .farm-life-wrapper.pulling .farm-card{
@@ -4252,123 +4253,106 @@ body{
 /* VISIT */
 
 .visit-section{
-    padding:70px 5%;
+    padding: 20px 5%;
 }
+.visit-section {
+    padding: 90px 5%;
+  }
 
-.sign-post,
-.sign-beam,
-.chain{
-    display:none;
-}
+  .farm-sign-wrapper {
+    padding-top: 60px; /* pulls everything tighter */
+    max-width: 100%;
+  }
 
-/* SIGN */
+  /* MAIN SIGN BODY */
+  .farm-sign {
+    margin-left: 0;
+    padding: 30px 20px;
+    border-radius: 24px; /* slightly less bulky */
+    transform: scale(0.92) translate(30px, 0px);
+    transform-origin: top center;
+  }
 
-.farm-sign{
-    margin-left:0;
+  /* TITLE */
+  .farm-sign h2 {
+    font-size: 1.8rem;
+    margin-bottom: 14px;
+  }
 
-    padding:30px 20px;
+  .visit-block h3 {
+    font-size: 1.2rem;
+    margin-bottom: 14px;
+  }
 
-    border-width:5px;
-    border-radius:25px;
-}
+  .visit-row {
+    padding: 8px 0;
+    font-size: 0.85rem;
+  }
 
-.farm-sign h2{
-    font-size:2.2rem;
+  .address {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
 
-    margin-bottom:15px;
-}
+  /* =========================
+     MAP
+  ========================= */
 
-/* DIVIDER */
+  .farm-map {
+    height: 160px;
+  }
 
-.sign-divider{
-    margin:25px 0;
-}
+  /* =========================
+     STRUCTURE ELEMENTS (LESS DOMINANT)
+  ========================= */
 
-/* CONTENT */
+  .sign-post {
+    width: 31px;
+  }
 
-.visit-block h3{
-    font-size:1.5rem;
+  .sign-beam {
+    height: 26px;
+  }
 
-    margin-bottom:18px;
-}
-
-.address{
-    margin-bottom:18px;
-
-    line-height:1.7;
-    font-size:.95rem;
-}
-
-/* HOURS */
-
-.visit-row{
-    flex-direction:column;
-
-    gap:4px;
-
-    text-align:center;
-
-    padding:10px 0;
-}
-
-.visit-row span,
-.visit-row strong{
-    font-size:.9rem;
-}
-
-/* PHONE */
-
-.phone-box{
-    margin-top:18px;
-
-    padding:12px;
-
-    font-size:.9rem;
-}
-
-/* MAP */
-
-.farm-map{
-    height:220px;
-
-    border-radius:8px;
-}
-
-
+  .chain {
+    height: 70px;
+    width: 4px;
+  }
 
 /* FOOTER */
+.farm-footer {
+    padding: 60px 5% 40px; /* tighter vertical space */
+    text-align: center;
+  }
 
+  /* =========================
+     NAV LINKS
+  ========================= */
 
+  .footer-nav {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-.farm-footer{
+  .footer-nav a {
+    font-size: 0.85rem;
+  }
 
-    padding:
+  /* =========================
+     BRAND / TRACK TEXT
+  ========================= */
 
-    90px
+  .track {
+    font-size: 2rem; /* reduced from 3rem */
+    line-height: 1.1;
+  }
 
-    5%
-
-    60px;
-
-}
-
-
-
-.footer-nav{
-
-    gap:15px;
-
-}
-
-
-
-.track{
-
-    font-size:3rem;
-
-}
-
-
+  /* OPTIONAL: if there's subtext */
+  .farm-footer p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
 
 /* PERFORMANCE */
 
