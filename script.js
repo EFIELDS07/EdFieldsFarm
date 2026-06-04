@@ -28,6 +28,14 @@ faders.forEach(fader => {
     appearOnScroll.observe(fader);
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const video = document.querySelector('.hero-video');
+
+    if (video) {
+        video.playbackRate = 0.9;
+    }
+});
+
 
 // NOTEBOOK GALLERY
 
@@ -108,40 +116,62 @@ new IntersectionObserver(entries => {
 invoiceObserver.observe(invoice);
 
 /* =========================================
-   HISTORY BOX DROP
+   HISTORY REVEAL
 ========================================= */
 
-const historyBoxes =
-    document.querySelectorAll(".history-box");
+document.querySelectorAll('.history-toggle').forEach(toggle => {
 
-const historyObserver =
-new IntersectionObserver(entries => {
+    toggle.addEventListener('click', () => {
+
+        const box = toggle.closest('.history-box');
+
+        box.classList.toggle('active');
+
+    });
+
+});
+
+const historySection = document.querySelector('.history-section');
+const worker = document.querySelector('.history-worker');
+const pallet = document.querySelector('.history-pallet-stack');
+const boxes = document.querySelectorAll('.history-box');
+const warning = document.querySelector('.history-warning');
+
+const historyObserver = new IntersectionObserver((entries) => {
 
     entries.forEach(entry => {
 
         if(entry.isIntersecting){
 
-            historyBoxes.forEach((box,index) => {
+setTimeout(() => {
 
-                setTimeout(() => {
+    worker.classList.add('animate');
+    pallet.classList.add('animate');
 
-                    box.classList.add("drop-in");
+    boxes.forEach((box, i) => {
 
-                }, index * 350);
+        setTimeout(() => {
+            box.classList.add('drop-in');
+        }, i * 120); // stagger prevents flash
 
-            });
+    });
+
+    setTimeout(() => {
+        warning.classList.add('hit');
+    }, 1200);
+
+}, 50);
+            historyObserver.unobserve(historySection);
 
         }
 
     });
 
-},{
-    threshold:.2
+}, {
+    threshold:0.4
 });
 
-historyObserver.observe(
-    document.querySelector(".history-section")
-);
+historyObserver.observe(historySection);
 
 /* =========================================
    PRODUCE REVEAL
